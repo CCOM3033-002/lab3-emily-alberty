@@ -9,11 +9,24 @@ int main(){
     int max = 100;
     int min = 0;
 
-    int numeroAleatorio1 = rand() % (max - min + 1) + min;
-    int numeroAleatorio2 = rand() % (max - min + 1) + min;
-    int numeroAleatorio3 = rand() % (max - min + 1) + min;
+    int a = rand() % (max - min + 1) + min;
+    int b = rand() % (max - min + 1) + min;
+    int c = rand() % (max - min + 1) + min;
 
-    cout << "Numeros aleatorios generados: " << numeroAleatorio1 << ", " << numeroAleatorio2 << ", " <<numeroAleatorio3 << endl;
+    cout << "Numeros aleatorios generados: " << a << ", " << b << ", " << c << endl;
+
+    if (a >= b && b >= c)
+        cout << a << b << c << endl; 
+    else if ( a >= c && c >= b)
+        cout << a << c << b << endl ;
+    else if (b >= a && a >= c)
+        cout << b << a << c << endl;
+    else if (b >= c && c >= a)
+        cout << b << c << a << endl;
+    else if (c >= a && a >= b)
+    cout << c << a << b << endl;
+    else 
+    cout << c << b << a << endl; 
 
     cout << "Orden descendiente: " << endl; 
 
